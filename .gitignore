@@ -1,4 +1,8 @@
 src/playground/*
+public/bundle.js
+public/bundle.js.map
+pubilc/styles.css
+pubilc/styles.css.map
 
 # Logs
 logs
