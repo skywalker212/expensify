@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A simple app to help you make decisions",
   "main": "index.js",
+  "engines": {
+    "node":"8.10.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/skywalker212/expensify.git"
