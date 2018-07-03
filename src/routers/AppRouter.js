@@ -8,14 +8,14 @@ import Header from '../components/Header.js';
 import HelpPage from '../components/HelpPage.js';
 
 const AppRouter = () => (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <div>
             <Header />
             <Switch>
-                <Route exact={true} path={process.env.PUBLIC_URL? process.env.PUBLIC_URL + '/' : '/'} component={ExpenseDashboardPage}/>
-                <Route path={process.env.PUBLIC_URL? process.env.PUBLIC_URL + '/create' : '/create'} component={AddExpensePage} />
-                <Route path={process.env.PUBLIC_URL? process.env.PUBLIC_URL + '/edit/:id' : '/edit/:id'} component={EditExpensePage} />
-                <Route path={process.env.PUBLIC_URL? process.env.PUBLIC_URL + '/help' : '/help'} component={HelpPage} />
+                <Route exact={true} path='/' component={ExpenseDashboardPage}/>
+                <Route path='/create' component={AddExpensePage} />
+                <Route path='/edit/:id' component={EditExpensePage} />
+                <Route path='/help' component={HelpPage} />
                 <Route component={Page404} />
             </Switch>
         </div>
