@@ -8,11 +8,11 @@ import Header from '../components/Header.js';
 import HelpPage from '../components/HelpPage.js';
 
 const AppRouter = () => (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename='/expensify'>
         <div>
             <Header />
             <Switch>
-                <Route exact={true} path='/' component={ExpenseDashboardPage}/>
+                <Route exact path='/' component={ExpenseDashboardPage}/>
                 <Route path='/create' component={AddExpensePage} />
                 <Route path='/edit/:id' component={EditExpensePage} />
                 <Route path='/help' component={HelpPage} />
